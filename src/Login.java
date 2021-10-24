@@ -9,6 +9,7 @@ public class Login extends JFrame{
     private JTextField passwordField;
     private JButton loginButton;
     private JTextField idField;
+    private JButton exitButton;
 
     public Login(){
         loginButton.addActionListener(new ActionListener() {
@@ -22,11 +23,17 @@ public class Login extends JFrame{
 
     private void initUI(){
         add(loginPanel);
-        setTitle("Login form");
-        setSize(250, 250);
+        setTitle("Login");
+        setSize(300, 250);
         setLocationRelativeTo(null);
         setDefaultCloseOperation(EXIT_ON_CLOSE);
         setVisible(true);
+        exitButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                System.exit(0);
+            }
+        });
     }
 
     private void login(){
