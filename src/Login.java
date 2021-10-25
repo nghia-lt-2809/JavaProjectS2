@@ -12,13 +12,21 @@ public class Login extends JFrame{
     private JButton exitButton;
 
     public Login(){
+        initUI();
+        getRootPane().setDefaultButton(loginButton);
         loginButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                login();
+                if (login()){
+                    JOptionPane.showMessageDialog(null, "Đăng nhập thành công");
+                    dispose();
+                    new MainSystem();
+                } else {
+                    JOptionPane.showMessageDialog(null, "Không thành công");
+                }
             }
         });
-        initUI();
+
     }
 
     private void initUI(){
@@ -36,7 +44,7 @@ public class Login extends JFrame{
         });
     }
 
-    private void login(){
+    private boolean login(){
         Connection con = null;
         PreparedStatement stm = null;
         ResultSet rs = null;
@@ -53,20 +61,20 @@ public class Login extends JFrame{
                 if (check)
                     break;
             }
-            if (!check){
-                JOptionPane.showMessageDialog(null, "Không thành công");
-            } else {
-                JOptionPane.showMessageDialog(null, "Đăng nhập thành công");
-            }
         } catch (SQLException exception) {
             exception.printStackTrace();
         }finally {
             try{
+                if (rs != null)
+                    rs.close();
+                if (stm != null)
+                    stm.close();
                 if (con != null)
                     con.close();
             } catch (SQLException exception) {
                 exception.printStackTrace();
             }
         }
+        return check;
     }
 }
