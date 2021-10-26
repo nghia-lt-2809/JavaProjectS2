@@ -1,3 +1,5 @@
+import Menu.MenuBar;
+
 import javax.swing.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -18,11 +20,11 @@ public class Login extends JFrame{
             @Override
             public void actionPerformed(ActionEvent e) {
                 if (login()){
-                    JOptionPane.showMessageDialog(null, "Đăng nhập thành công");
+                    JOptionPane.showMessageDialog(null, "Login Successfully", "Login", JOptionPane.PLAIN_MESSAGE) ;
                     dispose();
-                    new MainSystem();
+                    new MenuBar();
                 } else {
-                    JOptionPane.showMessageDialog(null, "Không thành công");
+                    JOptionPane.showMessageDialog(null, "Login Unsuccessful", "Login", JOptionPane.ERROR_MESSAGE);
                 }
             }
         });

@@ -26,14 +26,6 @@
         <properties/>
         <border type="none"/>
         <children>
-          <component id="3ccfb" class="javax.swing.JButton" binding="loginButton" default-binding="true">
-            <constraints>
-              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
-            </constraints>
-            <properties>
-              <text value="Đăng nhập"/>
-            </properties>
-          </component>
           <hspacer id="28088">
             <constraints>
               <grid row="0" column="2" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
@@ -49,7 +41,9 @@
               <grid row="0" column="3" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
             <properties>
-              <text value="Thoát"/>
+              <focusPainted value="false"/>
+              <focusable value="false"/>
+              <text value="Exit"/>
             </properties>
           </component>
           <hspacer id="12265">
@@ -57,6 +51,15 @@
               <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="1" hsize-policy="6" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
             </constraints>
           </hspacer>
+          <component id="a31e6" class="javax.swing.JButton" binding="loginButton">
+            <constraints>
+              <grid row="0" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="3" anchor="0" fill="1" indent="0" use-parent-layout="false"/>
+            </constraints>
+            <properties>
+              <focusPainted value="false"/>
+              <text value="Login"/>
+            </properties>
+          </component>
         </children>
       </grid>
       <vspacer id="7b326">
@@ -102,7 +105,7 @@
           <grid row="2" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Mã nhân viên"/>
+          <text value="Employee ID"/>
         </properties>
       </component>
       <component id="e869d" class="javax.swing.JLabel">
@@ -110,7 +113,7 @@
           <grid row="5" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Tài khoản"/>
+          <text value="User name"/>
         </properties>
       </component>
       <component id="d25de" class="javax.swing.JLabel">
@@ -118,7 +121,7 @@
           <grid row="7" column="1" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="8" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Mật khẩu"/>
+          <text value="Password"/>
         </properties>
       </component>
       <hspacer id="45886">
@@ -131,7 +134,7 @@
           <grid row="0" column="1" row-span="1" col-span="2" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties>
-          <text value="Phần Mềm Quản Lý Khách Sạn"/>
+          <text value="Hotel Management System"/>
         </properties>
       </component>
       <component id="a58f8" class="javax.swing.JPasswordField" binding="passwordField">

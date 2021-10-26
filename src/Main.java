@@ -1,6 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 //        new Login();
-        new MainSystem();
+//        MenuBar menuBar = new MenuBar();
+//        new MainForm();
+//        new About();
     }
 }
