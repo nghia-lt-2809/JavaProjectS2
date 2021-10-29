@@ -1,6 +1,24 @@
 package Models;
 
 public class Room {
+
+
+
+
+    private  String id_Room;
+
+    @Override
+    public String toString() {
+        return "Room{" +
+                "id_Room='" + id_Room + '\'' +
+                ", name='" + name + '\'' +
+                ", type='" + type + '\'' +
+                ", price=" + price +
+                ", status=" + status +
+                ", numberOfBeds=" + numberOfBeds +
+                '}';
+    }
+
     private  String name;
     private String type;
     private double price;
@@ -22,14 +40,6 @@ public class Room {
     public Room() {
     }
 
-    @Override
-    public String toString() {
-        return "Room{" +
-                "name='" + name + '\'' +
-                ", type='" + type + '\'' +
-                ", price=" + price +
-                '}';
-    }
 
     public Room(String name, String type, double price, int numberOfBeds) {
         this.name = name;
@@ -38,6 +48,16 @@ public class Room {
         this.status = status;
         this.numberOfBeds = numberOfBeds;
         this.status = true;
+    }
+    public Room(String id_Room) {
+        this.id_Room = id_Room;
+    }
+    public String getId_Room() {
+        return id_Room;
+    }
+
+    public void setId_Room(String id_Room) {
+        this.id_Room = id_Room;
     }
 
     public String getName() {
