@@ -144,7 +144,7 @@
         </constraints>
         <properties>
           <font size="24" style="0"/>
-          <text value="Hotel Management System"/>
+          <text value="Hotel Management MainSystem"/>
         </properties>
       </component>
       <vspacer id="171ca">

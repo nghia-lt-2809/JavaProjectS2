@@ -22,8 +22,8 @@ public class About extends JFrame{
         add(aboutPanel);
         setSize(500, 350);
         setResizable(false);
-        setVisible(true);
         setDefaultCloseOperation(DISPOSE_ON_CLOSE);
         setLocationRelativeTo(null);
+        setVisible(true);
     }
 }
